@@ -32,10 +32,16 @@ Removed components:
 * See [this JSON file](/config.json)
 
 Included autounattend.xml file:
+
 * bypasses the need to connect to/create a Microsoft account during OOBE (Out Of the Box Experience)
 * automatically accepts the EULA (End User Licence Agreement)
 * skips the product key step (uses Windows 10 or 11 key from EFI/UEFI if it exists, otherwise you'll be able to set it after installation
-* 
+
+Minimal tweaks: (To be re-evaluated)
+
+* dark theme enabled by default
+* some file explorer config turned on: show hidden files, show known file extensions, ...
+* taskbar aligned to the left
 
 ## Running it
 
@@ -61,46 +67,3 @@ winget install Microsoft.Edge
 winget install Opera.Opera
 winget install Google.Chrome
 ```
-
-# Features
-Removed apps:
-
-Clipchamp,
-News,
-Weather,
-Xbox,
-GetHelp,
-GetStarted,
-Office Hub,
-Solitaire,
-PeopleApp,
-PowerAutomate,
-ToDo,
-Alarms,
-Mail and Calendar,
-Feedback Hub,
-Maps,
-Sound Recorder,
-Your Phone,
-Media Player,
-QuickAssist,
-Internet Explorer,
-LA57 support,
-OCR for en-us,
-Speech support,
-TTS for en-us,
-Media Player Legacy,
-Tablet PC Math,
-Wallpapers,
-Edge,
-OneDrive.
-
-Small tweaks:
-* dark theme enabled by default.
-* some file explorer config turned on: show hidden files, show known file extensions, ...
-* taskbar aligned to the left.
-
-# Known issues:
-
-* Microsoft Teams is somehow still there. Feel free to create a PR if you can fix it!
-* Although Edge is removed, the desktop icon, a ghost of its taskbar pin, and some remnants in the Settings about it are still showing.
