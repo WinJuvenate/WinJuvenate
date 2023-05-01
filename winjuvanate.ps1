@@ -9,7 +9,7 @@ $windowsIsoDownloaderReleaseUrl = $config.WindowsIsoDownloaderReleaseUrl
 
 # Defining system variables
 Write-Output "Creating needed variables..."
-$rootWorkdir = "c:\tiny11\"
+$rootWorkdir = "c:\winjuvanate\"
 $isoFolder = $rootWorkdir + "iso\"
 $installImageFolder = $rootWorkdir + "installimage\"
 $bootImageFolder = $rootWorkdir + "bootimage\"
@@ -176,10 +176,10 @@ if ($isoDownloadProcess.ExitCode -eq 0) {
 	[System.IO.File]::Copy((Get-ChildItem .\tools\autounattend.xml).FullName, ($isoFolder + "autounattend.xml"), $true) | Out-Null
 
 	# Building the new trimmed and patched iso file
-	Write-Output "Building the tiny11.iso file..."
-	.\tools\oscdimg.exe -m -o -u2 -udfver102 -bootdata:("2#p0,e,b" + $isoFolder + "boot\etfsboot.com#pEF,e,b" + $isoFolder + "efi\microsoft\boot\efisys.bin") $isoFolder c:\tiny11.iso | Out-Null
+	Write-Output "Building the winjuvanate.iso file..."
+	.\tools\oscdimg.exe -m -o -u2 -udfver102 -bootdata:("2#p0,e,b" + $isoFolder + "boot\etfsboot.com#pEF,e,b" + $isoFolder + "efi\microsoft\boot\efisys.bin") $isoFolder c:\winjuvanate.iso | Out-Null
 } else {
-	Write-Output "Unable to build the tiny11 iso (an error occured while trying to download the original iso using WindowsIsoDownloader)."
+	Write-Output "Unable to build the winjuvanate iso (an error occured while trying to download the original iso using WindowsIsoDownloader)."
 }
 
 # Cleaning the folders used during the process

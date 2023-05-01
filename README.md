@@ -49,10 +49,10 @@ Minimal tweaks: (To be re-evaluated)
 2. Open a Powershell as administrator, go to the extraction path, and run the following commands:
 ```
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-.\tiny11creator.ps1
+.\winjuvanate.ps1
 ```
 3. Sit back and relax :) (it runs for 25 minutes approximately on my old-but-decent laptop). You might see some errors with RemoveWindowsPackage, but it's not an issue (has to do with the order and dependencies of packages to remove).
-4. The created Windows 11 installer iso is available in c:\tiny11.iso
+4. The created Windows 11 installer iso is available in c:\winjuvanate.iso
 
 ### Optional:
 
